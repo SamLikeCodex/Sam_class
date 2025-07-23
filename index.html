@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scaleable=no, maximum-scale=1, minimum-scale=1" />
 
     <title>Document</title>
     <style>
@@ -168,5 +168,171 @@
       </div>
       </form>
     </main>
+
+ <style>
+      html {
+        font-size: calc(16px + 1vw);
+      }
+      .parent {
+        font-size: 20px;
+      }
+      .useem {
+        font-size: 1em;
+      }
+      .userem {
+        font-size: 1rem;
+      }
+    </style>
+    <div class="parent">
+      <div class="useem">em</div>
+      <div class="userem">rem</div>
+    </div>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .rwd-box {
+        width: 25%;
+        padding: 10px;
+      }
+      .card {
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .card .img {
+        background-color: lightsalmon;
+        height: 100px;
+      }
+      .card .title {
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+      .card .content {
+        font-size: 0.5em;
+        color: gray;
+      }
+      @media screen and (max-width: 480px) {
+        .rwd-box {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .rwd-box {
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
+        .rwd-box {
+          width: 33%;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+      }
+ <style>
+      html {
+        font-size: calc(16px + 1vw);
+      }
+      .parent {
+        font-size: 20px;
+      }
+      .useem {
+        font-size: 1em;
+      }
+      .userem {
+        font-size: 1rem;
+      }
+    </style>
+    <div class="parent">
+      <div class="useem">em</div>
+      <div class="userem">rem</div>
+    </div>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .rwd-box {
+        width: 25%;
+        padding: 10px;
+      }
+      .card {
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .card .img {
+        background-color: lightsalmon;
+        height: 100px;
+      }
+      .card .title {
+        font-size: 0.8em;
+        font-weight: bold;
+      }
+      .card .content {
+        font-size: 0.5em;
+        color: gray;
+      }
+      @media screen and (max-width: 480px) {
+        .rwd-box {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .rwd-box {
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
+        .rwd-box {
+          width: 33%;
+        }
+      }
+      @media screen and (min-width: 1200px) {
+      }
+    </style>
+    <div class="container">
+      <div class="rwd-box">
+        <div class="card">
+          <div class="img"></div>
+          <div class="title">Card Title</div>
+          <div class="content">Card content goes here.</div>
+        </div>
+      </div>
+      <div class="rwd-box">
+        <div class="card">
+          <div class="img"></div>
+          <div class="title">Card Title</div>
+          <div class="content">Card content goes here.</div>
+        </div>
+      </div>
+      <div class="rwd-box">
+        <div class="card">
+          <div class="img"></div>
+          <div class="title">Card Title</div>
+          <div class="content">Card content goes here.</div>
+        </div>
+      </div>
+      <div class="rwd-box">
+        <div class="card">
+          <div class="img"></div>
+          <div class="title">Card Title</div>
+          <div class="content">Card content goes here.</div>
+        </div>
+      </div>
+      <div class="rwd-box">
+        <div class="card">
+          <div class="img"></div>
+          <div class="title">Card Title</div>
+          <div class="content">Card content goes here.</div>
+        </div>
+      </div>
+      <div class="rwd-box">
+        <div class="card">
+          <div class="img"></div>
+          <div class="title">Card Title</div>
+          <div class="content">Card content goes here.</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
