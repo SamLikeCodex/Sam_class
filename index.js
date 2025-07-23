@@ -84,7 +84,13 @@ false
 // let c = double(2, 3)
 // console.log(c); // 4
 
-
+// let sayMyName = function (name) {
+//   console.log("My name is " + name)
+// }
+// sayMyName("jac")
+// sayMyName("mary")
+// sayMyName("ming")
+// sayMyName("john")
 
 // 考題:
 // 1加到50=?
@@ -92,8 +98,7 @@ false
 // 解答:
 // let sum=0
 // for (let i=0; i<=100; i++) {
-//     console.log(i);
-//     sum +=i
+//      sum +=i
 // }
 // console.log(sum)
 
