@@ -1,0 +1,154 @@
+ /* id名稱介紹 */
+#myid{
+  color: seagreen;
+}
+
+.header {background-color: violet;}
+
+#cy {background-color: rgb(188, 238, 130);}
+
+
+*{font-size: 1.5rem;}
+ /* 通用選擇器 */
+
+.red-text, 
+.red{
+color: red;
+}
+/* html裡要加入class=red。有","="or" */
+
+.blue-text.blue {
+  color: blue;
+}
+/* 沒有","="and" */
+ /* (無空格).blue-text.blue之間不能空格  */
+ /* blue-text blue */
+
+
+.green-text .green {
+  color: green;
+}
+/* (有空格)父子階*/
+/*  */
+
+.pink {
+  color: pink !important;
+}
+/* 加入" !important"為最優先*/
+
+
+/* 彩虹色 */
+.bbb {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+/* 字距 */
+.my-btn {
+  /* background-color: aqua; 背景 */
+  /* background-image: url(./1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; */
+  background-size: contain;
+  background: url(./1.png) center no-repeat;
+  text-align: center; /* 文字水平置中 */
+  vertical-align: middle; /* 文字垂直置中 */
+  /* padding: 10px; 內距 */
+  /* padding-top: 15px; */
+  /* padding: 15px 10px 5px 20px; 上 右 下 左 */
+  padding: 10px 20px; /* 上下 左右 */
+  margin: 10px; /* 外距 */
+  border-radius: 20px; /* 圓角 */
+  font-weight: 900; /* 字體粗細 */
+  width: 100px; /* 寬度 */
+  height: 50px; /* 高度*/
+  /* box-shadow: 2px 2px 2px 2px gray; 陰影 */
+  /* margin: 0 auto; */
+  border: 1px solid #fd345f;
+  /* border-width: 1px;
+  border-color: #fd345f;
+  border-style: solid; */
+  /* border-style: ; */
+}
+
+.my-btn:hover{
+    background-color: burlywood;
+}
+.my-btn:active{
+    box-shadow:2px 2px 2px 2px black;
+}
+
+.cercle {
+  background: #fd345f;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  line-height: 100px;
+  border: #42b426 solid 10px;
+}
+    /* 圓形 */
+
+.message {
+  padding: 3px 6px;
+  border: dimgrey solid 1px;
+  border-radius: 10px;
+  background-color: #42b426;
+  color: white;
+  display: inline-block;
+  /* position: absolute;
+  position: relative; */
+  position: fixed;
+  top: 10px;
+  /* bottom: 10px; */
+  right: 10px;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+/* transition是監聽的意思 */
+
+.message:after {
+  content: attr(data-count);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.5rem;
+  color: red;
+}
+.message:hover {
+  padding: 3px 20px;
+}
+.message.move {
+  right: 50%;
+  opacity: 0;
+  transform: translateX(50%);
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #42b426;
+  position: relative;
+  overflow: scroll;
+}
+.box-center {
+  display: inline-block;
+  background-color: #fd345f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-box {
+  border: 1px solid #fd345f;
+  display: flex;
+  width: 400px;
+  height: 400px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
