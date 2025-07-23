@@ -70,18 +70,30 @@ false
 // i++為i=i+1, i--為i=i-1
 // for迴圈, i=0, i<5, i++表示i每次加1, 直到i小於5為止。
 // 這段程式碼會印出0到4的數字。
-for (let i = 0; i < 5; i++) {
-  console.log(i);
-}
-console.log("for的迴圈結束")
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+// console.log("for的迴圈結束")
 
 
-let double = function (num) {
-    // num = num || 1 // 如果沒有傳入參數，預設為1
-  return num * 2
-}
-let c = double(2, 3)
-console.log(c); // 4
+// let double = function (num) {
+//     // num = num || 1 // 如果沒有傳入參數，預設為1
+//   return num * 2
+// }
+// let c = double(2, 3)
+// console.log(c); // 4
 
 
+
+// 考題:
+// 1加到50=?
+
+// 解答:
+// let sum=0
+// for (let i=0; i<=100; i++) {
+//     console.log(i);
+//     sum +=i
+// }
+// console.log(sum)
 
