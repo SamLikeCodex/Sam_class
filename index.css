@@ -86,6 +86,9 @@ color: red;
   line-height: 100px;
   border: #42b426 solid 10px;
 }
+
+    /* 圓形 */
+
 .message {
   padding: 3px 6px;
   border: dimgrey solid 1px;
@@ -102,6 +105,9 @@ color: red;
   transform: translateX(10px);
   transition: all 0.3s ease;
 }
+
+/* transition是監聽的意思 */
+
 .message:after {
   content: attr(data-count);
   position: absolute;

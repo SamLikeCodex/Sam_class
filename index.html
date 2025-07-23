@@ -168,7 +168,7 @@
       </div>
       </form>
     </main>
-
+    
  <style>
       html {
         font-size: calc(16px + 1vw);
@@ -229,7 +229,8 @@
       }
       @media screen and (min-width: 1200px) {
       }
- <style>
+
+    </style>
       html {
         font-size: calc(16px + 1vw);
       }
@@ -334,5 +335,28 @@
         </div>
       </div>
     </div>
+
+ <style>
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid rgba(0, 0, 0, 0.3);
+        border-top: 5px solid black;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    </style>
+    <div class="spinner"></div>
+
   </body>
 </html>
