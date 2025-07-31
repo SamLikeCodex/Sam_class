@@ -102,3 +102,12 @@ false
 // }
 // console.log(sum)
 
+window.onload = function () {
+  console.log(document.querySelector("#year"))
+  document.querySelector("#year_btn").addEventListener("click", function () {
+    const year = document.querySelector("#year").value
+    console.log(year)
+    document.querySelector("#answer").innerHTML = year
+  })
+}
+
