@@ -10,6 +10,8 @@ console.log("Hello World!");
 true
 false
 
+
+// 
 // const name="Sam"
 // let number=1
 // number=2
@@ -102,12 +104,66 @@ false
 // }
 // console.log(sum)
 
-window.onload = function () {
-  console.log(document.querySelector("#year"))
-  document.querySelector("#year_btn").addEventListener("click", function () {
-    const year = document.querySelector("#year").value
-    console.log(year)
-    document.querySelector("#answer").innerHTML = year
-  })
-}
 
+// 因為js是由上到下執行的，所以如果要在網頁載入後才執行js程式碼，必須使用window.onload事件。
+// 這樣可以確保在網頁元素都載入完成後再執行js程式碼。
+// window.onload = function () {
+
+// window.onload = function () {
+//   console.log(document.querySelector("#year"))
+//   document.querySelector("#year_btn").addEventListener("click", function () {
+//     const year = parseInt(document.querySelector("#year").value)
+
+    // 該年份為400的倍數，或者為4的倍數，但不可以是100的倍數。
+    //  打出"let result+下面的if函數"，可以在"預覽網頁上"看到結果，沒打只能在網頁Dev的console看到結果。
+//     let result
+//     if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+//       result = "閏年"
+//     } else {
+//       result = "不是閏年"
+//     }
+//     console.log(year)
+//     document.querySelector("#answer").innerHTML = result
+//   })
+// }
+
+// const isTriangle = function (a, b, c) {
+// //  三角形特性: 任意兩邊之和大於第三邊
+// return a+b > c && a+c > b && b+c > a
+// }
+// console.log(isTriangle(1, 2, 3)) // false
+// console.log(isTriangle(3, 4, 5)) // true
+
+
+ // 身高單位:公尺, 體重單位:公斤
+  // BMI公式: 體重(公斤) / 身高(公尺)的平方
+
+    // 方法1:如下
+// const countBMI = function (height, weight){
+//    return weight / (height * height)
+// }
+// console.log(countBMI(1.75, 70)) // 22.86
+
+// 方法2:如下
+// const countBMI = function (height, weight){
+//    return weight / (height * height)
+// }
+// let bmi = countBMI(1.75, 70)
+// console.log(bmi) // 22.86
+// console.log(countBMI(1.75, 70))
+
+
+// 判斷大小的函式
+// const whichIsBig = function (a, b) {
+//   if (a > b) {
+//     return a + " is bigger than " + b;
+//   } else if (a < b) {
+//     return b + " is bigger than " + a;
+//   }
+// }
+// // 如果5=5不想回傳數字，而是undefined，則可以在else中return undefined。或是向上面直接不打"else return相等"。
+// console.log(whichIsBig(5, 10));
+// console.log(whichIsBig(5, 5))
+
+// 成績分類:100-90=優, 89-80=甲, 79-70=乙, 69-60=丙, 59-0=丁
+const 成績評等 = function (分數) {}
