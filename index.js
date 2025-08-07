@@ -240,7 +240,7 @@
 
 
 // 這是json語法的物件: 
-'{"id":1,"last_name":"林","first_name":"美玲","gender":"female","phone":"0912-345-678","birthday":"1998-03-15","email":"meiling.lin@email.com"}'
+// '{"id":1,"last_name":"林","first_name":"美玲","gender":"female","phone":"0912-345-678","birthday":"1998-03-15","email":"meiling.lin@email.com"}'
 // 這是轉換成js語法的物件:
 const students = [
   {
