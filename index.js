@@ -194,3 +194,159 @@ false
 // }
 
 
+// console.log("abcde".length); // 3
+// console.log("abcde".substring(0, 2)); // "ab"
+// console.log("abcde".toUpperCase()); // "ABC"
+// console.log("abcde".toLowerCase()); // "abc"
+// console.log("abcde".indexOf("b")); // 1
+// console.log("abcde".replace("b", "d")); // "adc"
+
+// //首字要大寫，後面字串保持小寫
+// const word = "abcde";
+// console.log(word.substring(0,1).toUpperCase() + word.substring(1).toLowerCase());
+// // 或者(1,word.length)可以包含到底整個字串
+// console.log(word.substring(0,1).toUpperCase() + word.substring(1,word.length).toLowerCase());
+// // 或者使用 charAt、slice 方法
+// console.log(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
+
+
+// // 物件陣列
+// const students = [
+//     {
+//         name: "John",
+//         age: 21,
+//         sayName: function () {
+//             console.log(`My name is  ${this.name}`);
+//         },
+//     },
+//     {
+//         name: "Mary",
+//         age: 22,
+//         sayname: function () {
+//             console.log(`My name is  ${this.name}`);
+//         },
+//     },
+// ];
+
+// // 推薦使用 for...of 迴圈來遍歷陣列
+// console.log("--- 使用 for...of ---");
+// for (const student of students) {
+//     // 在迴圈內，直接操作 student 物件
+//     console.log(student.name); // 正確印出 "John", "Mary"
+//     student.sayName();         // 正確呼叫每個學生的方法
+// }
+
+
+for (let i = 0; i < students.length; i++) {
+    // console.log(students[i].name); // //"John", "Mary"
+    console.log(students.name)
+    students[i].sayName(); // "John", "Mary"
+}
+console.log("學生姓名:" students[i].name); // "John"
+
+// 這是json語法的物件: 
+'{"id":1,"last_name":"林","first_name":"美玲","gender":"female","phone":"0912-345-678","birthday":"1998-03-15","email":"meiling.lin@email.com"}'
+// 這是轉換成js語法的物件:
+const students = [
+  {
+    id: 1,
+    last_name: "林",
+    first_name: "美玲",
+    gender: "female",
+    phone: "0912-345-678",
+    birthday: "1998-03-15",
+    email: "meiling.lin@email.com",
+  },
+  {
+    id: 2,
+    last_name: "王",
+    first_name: "俊傑",
+    gender: "male",
+    phone: "0923-456-789",
+    birthday: "1997-11-22",
+    email: "junjie.wang@email.com",
+  },
+  {
+    id: 3,
+    last_name: "張",
+    first_name: "雅婷",
+    gender: "female",
+    phone: "0934-567-890",
+    birthday: "1999-07-30",
+    email: "yating.zhang@email.com",
+  },
+  {
+    id: 4,
+    last_name: "李",
+    first_name: "建志",
+    gender: "male",
+    phone: "0945-678-901",
+    birthday: "1998-09-05",
+    email: "jianzhi.li@email.com",
+  },
+  {
+    id: 5,
+    last_name: "陳",
+    first_name: "佳蓉",
+    gender: "female",
+    phone: "0956-789-012",
+    birthday: "1997-05-18",
+    email: "jiarong.chen@email.com",
+  },
+  {
+    id: 6,
+    last_name: "黃",
+    first_name: "志明",
+    gender: "male",
+    phone: "0967-890-123",
+    birthday: "1999-01-10",
+    email: "zhiming.huang@email.com",
+  },
+  {
+    id: 7,
+    last_name: "吳",
+    first_name: "芳瑜",
+    gender: "female",
+    phone: "0978-901-234",
+    birthday: "1998-12-03",
+    email: "fangyu.wu@email.com",
+  },
+  {
+    id: 8,
+    last_name: "劉",
+    first_name: "家豪",
+    gender: "male",
+    phone: "0989-012-345",
+    birthday: "1997-08-20",
+    email: "jiahao.liu@email.com",
+  },
+  {
+    id: 9,
+    last_name: "蔡",
+    first_name: "雅琪",
+    gender: "female",
+    phone: "0990-123-456",
+    birthday: "1999-04-25",
+    email: "yaqi.cai@email.com",
+  },
+  {
+    id: 10,
+    last_name: "楊",
+    first_name: "志遠",
+    gender: "male",
+    phone: "0901-234-567",
+    birthday: "1998-06-12",
+    email: "zhiyuan.yang@email.com",
+  },
+]
+const result = []
+for (let i = 0; i < students.length; i++) {
+  if (students[i].gender == "male") {
+    result.push(students[i])
+  }
+  // console.log(students[i].name)
+  // students[i].sayName()
+}
+console.log(result)
+// console.log(JSON.stringify(students))
+
