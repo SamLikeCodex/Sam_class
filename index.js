@@ -237,6 +237,8 @@
 // }
 
 
+
+
 // 這是json語法的物件: 
 '{"id":1,"last_name":"林","first_name":"美玲","gender":"female","phone":"0912-345-678","birthday":"1998-03-15","email":"meiling.lin@email.com"}'
 // 這是轉換成js語法的物件:
@@ -343,13 +345,80 @@ const students = [
 // console.log(result)
 // // 使用console.log(JSON.stringify(students))，可以轉換成json字串
 
-// map
-const result = []
-for (let i = 0; i < students.length; i++) {
-    result.push({
-        ...students[i],
-        age: new Date().getFullYear() - students[i].birthday.substring(0, 4), // 計算年齡
-    })
-}
-console.log(result)
+
+// // 方法: map
+// const result = []
+// for (let i = 0; i < students.length; i++) {
+//     result.push({
+//         ...students[i],
+//         // "..." 是展開運算符，將原物件的屬性展開到新物件中
+//         // 這樣可以保留原物件的所有屬性
+//         // 例如: {id: 1, last_name: "林", first_name: "美玲", ...}
+//         // 這樣就不需要重複寫每個屬性
+//         // age: students[i].age, // 如果需要保留原有的年齡屬性，可以這樣寫
+//         age: new Date().getFullYear() - students[i].birthday.substring(0, 4), // 計算年齡
+//         // age = getFullYear() 取得我電腦裡的當前年份 - 上方10位學生的西元年份
+//         age: students[i].age
+//     })
+// }
+// console.log(result)
+
+// // map 實例:
+// console.log(
+//   students.map(function (student) {
+//     return {
+//       ...student,
+//       age: new Date().getFullYear() - student.birthday.substring(0, 4),
+//     }
+//   })
+// )
+
+
+// //方法: filter
+// 使用 filter 方法來過濾出男性學生
+// const result = []
+// for (let i = 0; i < students.length; i++) {
+//   if (students[i].gender == "male") {
+//     result.push(students[i])
+//   }
+// }
+// console.log(result)
+
+// filter 實例: 
+// console.log(
+//     students.filter(function (student) {
+//       return student.gender == "male"
+//     })
+// )
+
+
+// //方法: reduce
+// let sum = 0
+// for (let i = 0; i < students.length; i++) {
+//   sum +=new Date().getFullYear() - students[i].birthday.substring(0,4)
+// }
+// console.log(sum)
+
+// reduce 實例:
+// console.log(
+//   students.reduce(function (sum, student) {
+//     return sum + new Date().getFullYear() - student.birthday.substring(0, 4)
+//   }, 0)
+// )
+
+
+// // 方法: forEach
+// for (let i = 0; i< students.length; i++) {
+//     console.log(students[i].first_name)
+// }
+// students.forEach(function(student) {
+// console.log(student.first_name)
+// })
+// // function(){}是匿名函式, 可以直接寫在forEach裡面, 也可以寫成箭頭函式
+
+// 簡寫為以下: 
+// students.forEach((student) => {
+//   console.log(student.first_name)
+// })
+
 
