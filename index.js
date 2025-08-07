@@ -421,4 +421,28 @@ const students = [
 //   console.log(student.first_name)
 // })
 
+// -----------------------------------------------------------------------------------
 
+// fetch API: 用來從網路上取得資料
+// fetch
+fetch("https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json")
+  .then(function (res) {
+    return res.json()
+  })
+  .then(function (json) {
+    console.log(json)
+  })
+
+
+// setInterval
+let timer = setInterval(function () {
+    console.log("setInterval")
+}, 1000)
+
+// setTimeout
+setTimeout(function() {
+    console.log("timeout")
+}, 1000)
+setTimeout(() => {
+clearInterval(timer)
+}, 5000)
