@@ -1,14 +1,14 @@
-console.log("Hello World!");
+// console.log("Hello World!");
 
-// 數字
-0.5
-1
-// 字串
-;("use strict")
-;("abcdef")
-// 布林值 
-true
-false
+// // 數字
+// 0.5
+// 1
+// // 字串
+// ;("use strict")
+// ;("abcdef")
+// // 布林值 
+// true
+// false
 
 
 // 
@@ -237,13 +237,6 @@ false
 // }
 
 
-for (let i = 0; i < students.length; i++) {
-    // console.log(students[i].name); // //"John", "Mary"
-    console.log(students.name)
-    students[i].sayName(); // "John", "Mary"
-}
-console.log("學生姓名:" students[i].name); // "John"
-
 // 這是json語法的物件: 
 '{"id":1,"last_name":"林","first_name":"美玲","gender":"female","phone":"0912-345-678","birthday":"1998-03-15","email":"meiling.lin@email.com"}'
 // 這是轉換成js語法的物件:
@@ -339,14 +332,24 @@ const students = [
     email: "zhiyuan.yang@email.com",
   },
 ]
+// const result = []
+// for (let i = 0; i < students.length; i++) {
+//   if (students[i].gender == "male") {
+//     result.push(students[i])
+//   }
+//   // console.log(students[i].name)
+//   // students[i].sayName()
+// }
+// console.log(result)
+// // 使用console.log(JSON.stringify(students))，可以轉換成json字串
+
+// map
 const result = []
 for (let i = 0; i < students.length; i++) {
-  if (students[i].gender == "male") {
-    result.push(students[i])
-  }
-  // console.log(students[i].name)
-  // students[i].sayName()
+    result.push({
+        ...students[i],
+        age: new Date().getFullYear() - students[i].birthday.substring(0, 4), // 計算年齡
+    })
 }
 console.log(result)
-// console.log(JSON.stringify(students))
 
