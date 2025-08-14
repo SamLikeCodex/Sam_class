@@ -366,5 +366,49 @@
 
   <!-- 飄蕩的正方形 -->
   <div id="floating-square"></div>
+
+  
+<!-- 九九乘法表 -->
+  <input type="text" id="multiplier" value="" />
+    x
+    <input type="text" id="multiplicand" value="" />
+    <div id="canvas"></div>
+
+    <script>
+      let multiplier = 0
+      let multiplicand = 0
+
+      const multiplierInput = document.getElementById("multiplier")
+      const multiplicandInput = document.getElementById("multiplicand")
+
+      ;[multiplierInput, multiplicandInput].forEach((input) => {
+        input.addEventListener("keyup", () => {
+          multiplier = +multiplierInput.value
+          multiplicand = +multiplicandInput.value
+          render()
+        })
+      })
+
+      function render() {
+        let html = `<table border="1">`
+        for (let i = 0; i <= multiplier; i++) {
+          html += `<tr>`
+          for (let j = 0; j <= multiplicand; j++) {
+            if (j === 0 && i === 0) {
+              html += `<td></td>`
+            } else if (i === 0) {
+              html += `<td>${j}</td>`
+            } else if (j === 0) {
+              html += `<td>${i}</td>`
+            } else {
+              html += `<td>${i * j}</td>`
+            }
+          }
+          html += `</tr>`
+        }
+        html += `</table>`
+        document.getElementById("canvas").innerHTML = html
+      }
+    </script>
 </body>
 </html>
