@@ -159,3 +159,16 @@ color: red;
 @media screen and (max-width: 600px) {
 }
 /* port forward */
+
+
+/* 飄蕩正方形樣式 */
+#floating-square {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6b6b;
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+}
