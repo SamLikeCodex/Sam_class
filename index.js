@@ -446,3 +446,85 @@ setTimeout(function() {
 setTimeout(() => {
 clearInterval(timer)
 }, 5000)
+
+
+// 簡單的動畫效果: 點擊正方形移動到點擊位置
+// 動畫:點擊正方形移動到點擊位置，例如Dota2的英雄移動到點擊位置
+window.onload = function () {
+  const floatingSquare = document.querySelector("#floating-square")
+
+  // 正方形目前的位置
+  let currentX = 50
+  let currentY = 50
+
+  // 設定初始位置
+  floatingSquare.style.left = currentX + "px"
+  floatingSquare.style.top = currentY + "px"
+
+  // 動畫變數
+  let isAnimating = false // 是否正在動畫中
+
+  // 簡單的動畫函數
+  function moveToPosition(targetX, targetY) {
+    // 如果已經在動畫中，就不執行新的動畫
+    if (isAnimating) return
+
+    isAnimating = true // 標記開始動畫
+
+    // 計算需要移動的距離
+    const startX = currentX
+    const startY = currentY
+    const distanceX = targetX - startX
+    const distanceY = targetY - startY
+
+    // 動畫設定
+    let step = 0 // 目前動畫步驟
+    const totalSteps = 30 // 總共要跑幾步（步數越多動畫越平滑）
+
+    // 使用 setInterval 每隔一段時間移動一小步
+    const animation = setInterval(function () {
+      step++ // 增加步驟
+
+      // 計算目前應該移動到哪裡（ease-out 效果）
+      // 使用簡單的數學公式：每一步移動的距離會越來越小
+      const progress = step / totalSteps // 進度 0 到 1
+      const easeOutProgress = 1 - Math.pow(1 - progress, 3) // ease-out 曲線
+
+      // 計算新位置
+      currentX = startX + distanceX * easeOutProgress
+      currentY = startY + distanceY * easeOutProgress
+
+      // 移動正方形到新位置
+      floatingSquare.style.left = currentX + "px"
+      floatingSquare.style.top = currentY + "px"
+
+      // 如果動畫完成了
+      if (step >= totalSteps) {
+        clearInterval(animation) // 停止動畫
+        isAnimating = false // 標記動畫結束
+
+        // 確保最終位置精確
+        currentX = targetX
+        currentY = targetY
+        floatingSquare.style.left = currentX + "px"
+        floatingSquare.style.top = currentY + "px"
+      }
+    }, 20) // 每 20 毫秒執行一次（約 50fps）
+  }
+
+  // 監聽滑鼠點擊
+  document.addEventListener("click", function (event) {
+    // 獲取點擊的位置
+    const clickX = event.clientX
+    const clickY = event.clientY
+
+    // 計算正方形應該移動到的位置（讓正方形中心對準點擊位置）
+    const squareSize = 50
+    let targetX = clickX - squareSize / 2
+    let targetY = clickY - squareSize / 2
+
+    // 開始移動動畫
+    moveToPosition(targetX, targetY)
+  })
+}
+
