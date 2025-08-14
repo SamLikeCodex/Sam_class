@@ -423,15 +423,15 @@ const students = [
 
 // -----------------------------------------------------------------------------------
 
-// fetch API: 用來從網路上取得資料
-// fetch
-fetch("https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json")
-  .then(function (res) {
-    return res.json()
-  })
-  .then(function (json) {
-    console.log(json)
-  })
+// // fetch API: 用來從網路上取得資料
+// // fetch
+// fetch("https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json")
+//   .then(function (res) {
+//     return res.json()
+//   })
+//   .then(function (json) {
+//     console.log(json)
+//   })
 
 
 // setInterval
@@ -528,3 +528,30 @@ window.onload = function () {
   })
 }
 
+
+
+// 接上"老師的json API_db、dev"網址
+// "method:"接上埠:Get,新增id:Post,修改id:Put,刪除id:Delete
+// 使用 fetch API 發送 POST 請求到學生資料的 API
+// post students
+fetch("http://localhost:3000/api/students", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  // headers這條是設定請求的內容類型為 JSON
+  // body是請求的內容, 這裡是新增學生資料
+  body: JSON.stringify({
+    first_name: "John",
+    last_name: "Doe",
+    gender: "male",
+    phone: "123-456-7890",
+    email: "Vh2o2@example.com",
+  }),
+})
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    console.log(data)
+  })
+
+  
