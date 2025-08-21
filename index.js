@@ -1,5 +1,5 @@
-// console.log("Hello World!");
-
+document.addEventListener('DOMContentLoaded', () => {
+    const gameContainer = document.getElementById('game-container');
 // // 數字
 // 0.5
 // 1
@@ -553,5 +553,6 @@ fetch("http://localhost:3000/api/students", {
   .then((data) => {
     console.log(data)
   })
+
 
   
